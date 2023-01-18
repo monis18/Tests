@@ -1,0 +1,78 @@
+
+
+<nav class="navbar bg-body-tertiary mb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white">Digital Thinkers</a>
+        <div class="d-flex" role="search">
+            <input [formControl]="searchName" class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-light me-2" (click)="searchByName()" >Search</button>
+        </div>
+        <button class="btn btn-light text-white" (click)="orderByName()">
+            <img [src]=[srcOrder] alt="">
+        </button>
+    </div>
+</nav>
+
+<div class="container content" >
+    <div class="row">
+        <div class="col-12 col-md-4 pb-4" *ngFor="let item of items">
+            <div class="card" [routerLink]="['/form', item.model]">
+                <h5 class="card-header">{{item.model}}</h5>
+                <div class="card-body">
+                    <p class="card-text">{{item.description}}</p>
+                    <!-- <a href="#" class="btn btn-secondary">Ver mas</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid footer">
+    <div class="row p-5 pb-2 g text-white">
+        <div class="col-md-3 col-6">
+            <p class="h3">Digital Thinkers</p>
+            <div class="mb-2">
+                <p class="h6">Guadalajara, Jalisco</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <p class="h5 mb-4">Test</p>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">Angular </a>
+            </div>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">HTML </a>
+            </div>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">TypeScript </a>
+            </div>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">PHP  </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <p class="h5 mb-4">Links</p>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">Terms & Conditions </a>
+            </div>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">Privacy Policy </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <p class="h5 mb-4">Contact</p>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">Facebook </a>
+            </div>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">Instagram  </a>
+            </div>
+        </div>
+        <div class="col-12 pt-4 ">
+            <p class="text-white text-center">
+                Copyright - All rights reserver @2023 
+            </p>
+        </div>
+    </div>
+</div>
+

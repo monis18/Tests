@@ -1,0 +1,14 @@
+<h1 mat-dialog-title> {{ data.model }} </h1>
+<hr>
+<div mat-dialog-content>
+  <p class="h4">Nombre:</p>
+  <p> {{data.name}}</p>
+  <p class="h4">Correo:</p>
+  <p> {{data.email}}</p>
+  <p class="h4">Comentario:</p>
+  <p> {{data.comment}}</p>
+</div>
+<hr>
+<div mat-dialog-actions style="text-align: end;">
+  <button (click)="close()" class="btn btn-secondary text-end">Aceptar</button>
+</div>

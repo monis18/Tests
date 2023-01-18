@@ -1,0 +1,15 @@
+.footer{
+    background: linear-gradient(99deg, rgba(68,96,99,1) 0%, rgba(204,212,221,1) 100%);
+}
+
+.navbar{
+    background-color: rgba(68,96,99,1);
+}
+
+.content{
+    min-height: 70vh;
+}
+
+.card{
+    cursor: pointer;
+}

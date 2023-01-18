@@ -1,0 +1,89 @@
+<nav class="navbar bg-body-tertiary mb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white">Digital Thinkers</a>
+
+        <div class="d-flex" role="search">
+            <p class="h5 text-white pe-5"> {{modelo}} </p>
+        </div>
+    </div>
+</nav>
+
+<div class="container content pt-4" >
+    <div class="row">
+        <form [formGroup]="formFinal">
+            <div class="input-group mb-4">
+                <span class="input-group-text" id="basic-addon1">Nombre</span>
+                <input type="text" class="form-control" placeholder="Ingresa tu nombre completo" aria-label="Username" aria-describedby="basic-addon1" formControlName="name">
+            </div>
+            
+            <div class="input-group mb-4">
+                <span class="input-group-text" id="basic-addon2">Correo</span>
+                <input type="text" class="form-control" placeholder="Ingresa tu correo electrónico" aria-label="Username" aria-describedby="basic-addon1" formControlName="email">
+            </div>
+            
+            <div class="input-group mb-4">
+                <span class="input-group-text">Comentario</span>
+                <textarea class="form-control" aria-label="With textarea" placeholder="Ingresa un comentario" formControlName="comment"></textarea>
+            </div>
+
+        </form>
+        
+    </div>
+    <div class="row">
+        <div *ngIf="error" class="alert alert-danger" role="alert">
+            Error! Formulario incompleto
+          </div>
+        <div class="mb-5 text-center">
+            <button class="btn btn-secondary text-white" (click)="validateForm()"> Enviar </button>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid footer">
+    <div class="row p-5 pb-2 g text-white">
+        <div class="col-md-3 col-6">
+            <p class="h3">Digital Thinkers</p>
+            <div class="mb-2">
+                <p class="h6">Guadalajara, Jalisco</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <p class="h5 mb-4">Test</p>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">Angular </a>
+            </div>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">HTML </a>
+            </div>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">TypeScript </a>
+            </div>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">PHP  </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <p class="h5 mb-4">Links</p>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">Terms & Conditions </a>
+            </div>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">Privacy Policy </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-6">
+            <p class="h5 mb-4">Contact</p>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">Facebook </a>
+            </div>
+            <div class="mb-2">
+                <a href="#" class="text-white text-decoration-none">Instagram  </a>
+            </div>
+        </div>
+        <div class="col-12 pt-4 ">
+            <p class="text-white text-center">
+                Copyright - All rights reserver @2023 
+            </p>
+        </div>
+    </div>
+</div>
